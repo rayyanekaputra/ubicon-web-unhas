@@ -2,16 +2,13 @@ import React from 'react';
 
 const Home = () => {
 return (
-	<div
-	style={{
-		display: 'flex',
-		justifyContent: 'Right',
-		alignItems: 'Right',
-		height: '100vh',
-        color:'white'
-	}}
-	>
-	<h1>Welcome to GeeksforGeeks</h1>
+	<div className='Hero'>
+		<div>
+			<img src='/logo192.png' alt='logo lab ubicon'></img>
+		</div>
+		<h1>Ubicon Lab</h1>
+		<h2>Ubiquitous Computing & Networking Lab.</h2>
+		<p>@HASANUDDIN UNIVERSITY </p>
 	</div>
 );
 };

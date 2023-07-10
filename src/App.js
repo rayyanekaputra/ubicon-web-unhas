@@ -8,14 +8,12 @@ import About from './pages/about';
 function App() {
   return (
     <Router>
-   
-
       <Navbar/>
       <Routes>
+      {/* https://reactrouter.com/en/main/components/routes */}
         <Route path='/' element = {<Home/>}/>
         <Route path='/about' element={<About/>} />
       </Routes>
-
     </Router>
 
     

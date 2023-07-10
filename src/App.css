@@ -5,18 +5,9 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: white;
   font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
-}
-
-.box1 {
-  background-color: white;
-}
-
-.box2 {
-  background-color: blue;
-}
-
-/*# sourceMappingURL=App.css.map */
+  color: #242424;
+}/*# sourceMappingURL=App.css.map */
