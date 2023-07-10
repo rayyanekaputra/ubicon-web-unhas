@@ -1,0 +1,47 @@
+
+
+//panggil variabel dari App.sass
+    @use './App.sass'
+
+.hero
+    // background-color: blue
+    background-image: url("assets/img_hero_overlay.png")
+    background-repeat: no-repeat
+    background-attachment: fixed
+    background-position: center
+    padding: 64px 120px 0 120px
+    display: flex
+    flex-direction: column
+    align-items: center
+    h1
+        padding-bottom: 16px
+    h2
+        padding-bottom: 24px
+
+h1
+    font-size: 64px
+    font-weight: bold
+    line-height: 72px
+h2
+    font-size: 32px
+    font-weight: normal
+    line-height: 40px
+    width: 24ch
+    text-align: center
+
+.carousel-running-container
+    padding: 24px 120px 24px 120px
+    // background-color: orange
+    background-color: transparent
+    overflow-x: scroll
+    ul
+        display: flex
+        flex-direction: row
+        list-style-type: none
+        gap: 24px
+    .carousel-img
+        background: yellow
+        width: 304px
+        height: 368px
+        border-radius: 16px
+        box-shadow: 0 0 24px -8px black //box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
