@@ -7,6 +7,7 @@ return (
         <NavLink to="/">
             Home
         </NavLink>
+        {/* TODO: buatkan pagenya dan router di App.js */}
         <NavLink to="/blog">
             Blog
         </NavLink>
