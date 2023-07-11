@@ -1,0 +1,21 @@
+
+//import App variables
+@use "../../../src/App" 
+.navbar-container
+    position: relative
+    width: 100%
+    height: 128px
+    display: flex
+    flex-direction: row //flex horizontal
+    align-items: center //kasih ke tengah secara vertical
+    justify-content: center //kasih ke tengah secara horizontal
+    background-color: transparent
+
+    a
+        text-decoration: none
+        text-decoration-line: none
+        color: App.$primary-gray
+        padding: 0px 24px
+    a:hover
+        font-weight: bold
+        color: App.$brand-violet
