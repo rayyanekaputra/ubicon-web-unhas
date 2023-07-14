@@ -1,0 +1,101 @@
+
+
+
+//animation function in sass
+
+@mixin animate($animation,$duration,$method,$times)
+    animation: $animation $duration $method $times
+
+
+@mixin keyframes($name)
+    @keyframes #{$name}
+        @content
+    
+
+
+.hero
+    // background-color: blue
+    background-image: url("assets/img_hero_overlay.png")
+    background-repeat: no-repeat
+    background-position: top
+    background-size: cover
+    padding: 120px 120px
+    margin-top: -150px
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    z-index: 1
+    .logo-ubicon
+        background-image: radial-gradient(54.66% 54.66% at 50.00% 50.00%, #EBE4FF 0%, rgba(255, 255, 255, 0.00) 100%)
+        width: 416px
+        height: 416px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: -140px
+        img
+            width: 80px
+            height: 80px
+    h1
+        padding-top: 68px
+        padding-bottom: 16px
+    h2
+        padding-bottom: 24px
+
+h1
+    font-size: 64px
+    font-weight: bold
+    line-height: 72px
+h2
+    font-size: 32px
+    font-weight: normal
+    line-height: 40px
+    width: 24ch
+    text-align: center
+
+.carousel-running-container
+    padding: 24px 120px 24px 120px
+    // background-color: orange
+    background-color: transparent
+    overflow-x: hidden
+    position: relative
+    display: flex
+   
+    
+    ul
+        width: 100%
+        display: flex
+        flex-direction: row
+        list-style-type: none
+        justify-content: center
+        align-items: center
+        transition: all 1s ease
+        @include keyframes(carousel-running-animation)
+            0%
+                transform: translateX(0%)
+            100%
+                transform: translateX(-100%)
+                // transform: translateX(calc(-304px * 4))
+        @include animate(carousel-running-animation, 12s, linear, infinite)
+        
+        
+    .carousel-img
+        position: relative
+        display: flex
+        flex: 1
+        background: blue
+        width: 304px
+        height: 368px
+        border-radius: 16px
+        box-shadow: 0 0 24px -8px black //box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+        margin-right: 24px
+        
+       
+       
+       
+       
+        
+       
+
+
