@@ -40,6 +40,30 @@ p {
   text-align: center;
 }
 
+button {
+  display: flex;
+  border-radius: 8px;
+  border: none;
+  background-color: #774AF7;
+  padding: 16px;
+  transition: all 0.5s ease-in-out;
+}
+button p {
+  width: 100%;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  color: white;
+}
+
+button:hover {
+  transform: scale(115%);
+  cursor: pointer;
+}
+
 section.hero {
   background-image: url("assets/img_hero_overlay.png");
   background-repeat: no-repeat;
@@ -65,6 +89,7 @@ section.hero .logo-ubicon {
 section.hero .logo-ubicon img {
   width: 80px;
   height: 80px;
+  border-radius: 16px;
 }
 section.hero h1 {
   padding-top: 68px;
@@ -134,4 +159,60 @@ section.research-type ul {
   align-items: center;
   gap: 16px;
   width: 1200px;
+}
+
+section.our-people {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(15% 35% at center, #774AF7 0%, rgba(255, 255, 255, 0) 100%);
+  margin-bottom: 120px;
+}
+section.our-people .our-people-container {
+  height: 512px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 120px;
+  row-gap: 42px;
+  border-radius: 16px;
+  background-color: rgba(242, 242, 242, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+section.our-people .preview-img-wrapper {
+  display: flex;
+  margin-top: -240px;
+  align-items: center;
+  justify-content: center;
+}
+section.our-people .preview-img-wrapper #head-of-ubicon {
+  z-index: 5;
+  margin: 40px -80px 0px;
+}
+section.our-people .preview-img-wrapper #ubicon-1, section.our-people .preview-img-wrapper #ubicon-2 {
+  transform: rotate(-9.27deg);
+  margin: 0px -24px 0px;
+}
+section.our-people .preview-img-wrapper #ubicon-3, section.our-people .preview-img-wrapper #ubicon-4 {
+  transform: rotate(9.27deg);
+  margin: 0px -24px 0px;
+}
+section.our-people .preview-img-wrapper #ubicon-3 {
+  z-index: 1;
+}
+section.our-people .preview-img-wrapper #ubicon-4 {
+  z-index: 0;
+}
+section.our-people .preview-img-wrapper .preview-img {
+  position: relative;
+  display: flex;
+  background: blue;
+  width: 304px;
+  height: 368px;
+  border-radius: 16px;
+  box-shadow: 0 0 24px -8px black;
 }/*# sourceMappingURL=index.css.map */

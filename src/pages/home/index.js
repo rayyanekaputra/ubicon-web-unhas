@@ -1,8 +1,20 @@
 import React from "react";
 import "../home/index.css";
 import { ListResearch } from "./components/rendererResearch";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  //function untuk ganti page
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `about`; 
+    navigate(path);
+  }
+
+
+
+
   return (
     <div>
       <section className="hero">
@@ -13,6 +25,7 @@ const Home = () => {
         <h2>Ubiquitous Computing & Networking Lab.</h2>
         <p>@HASANUDDIN UNIVERSITY </p>
       </section>
+
       <div className="carousel-running-container">
         {/* infinite slider, duplikat supaya seamless */}
         <ul>
@@ -69,6 +82,7 @@ const Home = () => {
           </li>
         </ul>
       </div>
+
       <section className="research-type">
         <h1>Connecting Devices with Our Research</h1>
         <p className="p1">
@@ -79,6 +93,22 @@ const Home = () => {
         <ul className="list-research-wrapper">
           <ListResearch />
         </ul>
+      </section>
+
+      <section className="our-people">
+        <div className="our-people-container">
+          <h1>Our People</h1>
+          <button onClick={routeChange}>
+              <p>Read more</p>
+          </button>
+        </div>
+        <div className="preview-img-wrapper">
+            <div className="preview-img" id="ubicon-1"></div>
+            <div className="preview-img" id="ubicon-2"></div>
+            <div className="preview-img" id="head-of-ubicon"></div>
+            <div className="preview-img" id="ubicon-3"></div>
+            <div className="preview-img" id="ubicon-4"></div>
+          </div>
       </section>
     </div>
   );
