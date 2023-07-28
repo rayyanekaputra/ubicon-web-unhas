@@ -1,9 +1,9 @@
-import { research } from "../data/dataResearch";
+import { ResearchList } from "../data/dataResearch";
 import "../components/rendererResearch.css";
 
 //CARI: apa bedanya export default vs export biasa?
-export function ListResearch() {
-  const rendererResearchList = research.map((researchField) => (
+export function ResearchRenderer() {
+  const researchRenderer = ResearchList.map((researchField) => (
 
     //jangan dikasih parent container, karena disetiap item bakalan punya kalau dikasih
     //bukan secara keseluruhan
@@ -15,5 +15,5 @@ export function ListResearch() {
 
   //return dalam bentuk apaki
   // return <ul>{rendererResearchList}</ul>; 
-  return rendererResearchList;
+  return researchRenderer;
 }
