@@ -36,6 +36,7 @@ p
     line-height: 32px
     text-align: center
 button
+    height: 56px
     p
         width: 100%
         text-align: center
@@ -51,7 +52,6 @@ button
     background-color: App.$brand-violet
     padding: 16px
     transition: all .5s ease-in-out
-
 button:hover
     transform: scale(115%)
     cursor: pointer
@@ -203,8 +203,47 @@ section.our-people
             border-radius: 16px
             box-shadow: 0 0 24px -8px black //box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
             
+section.news-section
+    display: flex
+    width: 100%
+    justify-content: center
+    padding: 0px 120px 120px
+    flex-direction: column
+    gap: 82px
+
+    
+   
+
+    .news-header
+        display: flex
+        flex-direction: row        
+        justify-content: space-between
+        width: 100%
+        .news-header-left
+            display: flex
+            flex-direction: column
+            row-gap: 24px
+            h1
+                text-align: left
+            p
+                text-align: left
+                width: 24ch
+    // mau edit style content? ke newsContentRenderer.sass
+    ul.news-content-renderer
+        display: flex
+        flex-direction: row
+        gap: 24px
+        width: 100%
+        overflow-x: scroll
+         /* Hide scrollbar for IE, Edge and Firefox */
+
+        -ms-overflow-style: none
+        scrollbar-width: none
         
-       
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    ul.news-content-renderer::-webkit-scrollbar 
+        display: none
         
        
 

@@ -1,19 +1,16 @@
-import React from "react";
+
 import "../home/index.css";
-import { ListResearch } from "./components/rendererResearch";
+import { ResearchRenderer } from "./components/rendererResearch";
+import {NewsContentRenderer} from "./components/newsContentRenderer"
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-
-  //function untuk ganti page
-  let navigate = useNavigate(); 
-  const routeChange = () =>{ 
-    let path = `about`; 
+  //TODO: cari tau bagaiman caranya bisa ganti page dari terima passing parameter
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `about`;
     navigate(path);
-  }
-
-
-
+  };
 
   return (
     <div>
@@ -91,7 +88,7 @@ const Home = () => {
         </p>
 
         <ul className="list-research-wrapper">
-          <ListResearch />
+          <ResearchRenderer />
         </ul>
       </section>
 
@@ -99,16 +96,37 @@ const Home = () => {
         <div className="our-people-container">
           <h1>Our People</h1>
           <button onClick={routeChange}>
-              <p>Read more</p>
+            <p>Read more</p>
           </button>
         </div>
         <div className="preview-img-wrapper">
-            <div className="preview-img" id="ubicon-1"></div>
-            <div className="preview-img" id="ubicon-2"></div>
-            <div className="preview-img" id="head-of-ubicon"></div>
-            <div className="preview-img" id="ubicon-3"></div>
-            <div className="preview-img" id="ubicon-4"></div>
+          <div className="preview-img" id="ubicon-1"></div>
+          <div className="preview-img" id="ubicon-2"></div>
+          <div className="preview-img" id="head-of-ubicon"></div>
+          <div className="preview-img" id="ubicon-3"></div>
+          <div className="preview-img" id="ubicon-4"></div>
+        </div>
+      </section>
+
+      <section className="news-section">
+        <div className="news-header">
+          <div className="news-header-left">
+            <h1>What's Up?</h1>
+            <p className="p1">
+              Read our latest news and stories in our blog!
+            </p>  
           </div>
+          
+          <button onClick={routeChange}>
+            <p>Read more</p>
+          </button>
+        </div>
+        <div className="news-content-container">
+          {/* TODO: bikinkan renderer function untuk newsnya, usahakan pake fetch API */}
+          <ul className="news-content-renderer">
+            <NewsContentRenderer/>
+          </ul>
+        </div>
       </section>
     </div>
   );
