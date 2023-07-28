@@ -1,5 +1,5 @@
 
-export const research = [
+export const ResearchList = [
   {
     id: 0, // Used in JSX as a key
     field: "Cloud Computing",
